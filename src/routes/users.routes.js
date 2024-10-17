@@ -1,12 +1,12 @@
 //
-import { Router } from "express";
+const { Router } = require("express");
 //
 const usersRoutes = Router();
+const UsersController = require("../controllers/UsersController.js")
 //
-usersRoutes.post("/", () => {
-  const { email, password } = request.body;
-  response.JSON({ email, password });
-})
+const usersController = new UsersController();
+//
+usersRoutes.post("/", usersController.create)
 //
 module.exports = usersRoutes;
 //
