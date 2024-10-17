@@ -4,7 +4,7 @@ const sqlite = require("sqlite");
 //
 async function sqliteConnection(){
   const database = await sqlite.open({
-    filename: "../../database";
+    filename: "../../database"
   })
 }
 //
