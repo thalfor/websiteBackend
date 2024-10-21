@@ -14,7 +14,7 @@ class UsersController {
       throw new AppError("this email already exists");
     }
 
-    const hashedPassword = hash(password, 8)
+    const hashedPassword = await hash(password, 8)
 
     await database.run("insert into users (email, password) values (?, ?)", [email, hashedPassword]);
     
