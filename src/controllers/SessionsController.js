@@ -26,10 +26,6 @@ class SessionsController {
       subject: String(user.id),
       expiresIn
     });
-
-/*
-PUT HERE THE RESPONSE TO LOGIN
-*/
     
     return response.json({ email, password, token });
   }
