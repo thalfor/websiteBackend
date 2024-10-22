@@ -28,6 +28,6 @@ app.use((error, request, response, nexto) => {
   });
 });
 //
-const PORT = 3000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`server running at port ${PORT}`));
 //
