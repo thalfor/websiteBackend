@@ -30,7 +30,7 @@ class UsersController {
     const user = await database.get("select * from users where id = (?)", [user_id]);
 
     if(!user) {
-      throw new AppError("Usuário não encontrado")
+      throw new AppError("User not found")
      }
 
     const checkUserExists = await database.get("select * from users where email = (?)", [email]);
